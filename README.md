@@ -13,7 +13,7 @@ Firebase is Google's mobile platform that helps you quickly develop high-quality
 Use this guide when setting up or upgrading this core extension and the extensions for each of the Firebase products (such as analytics and remote config). The extensions are using the [Firebase C++ SDK](https://firebase.google.com/docs/cpp/setup) and the [Firebase iOS SDK](https://github.com/firebase/firebase-ios-sdk).
 
 * Firebase C++ SDK download link: https://firebase.google.com/download/cpp
-* Firebase C++ SDK direct download link: https://dl.google.com/firebase/sdk/cpp/firebase_cpp_sdk_8.8.0.zip
+* Firebase C++ SDK direct download link: https://dl.google.com/firebase/sdk/cpp/firebase_cpp_sdk_11.2.0.zip
 
 ### Copy includes
 Copy header files from `firebase_cpp_sdk/include`.
@@ -23,8 +23,8 @@ Copy header files from `firebase_cpp_sdk/include`.
 The Gradle dependencies used by this extension need to match the ones specified in the Firebase C++ SDK.
 
 * Add Gradle dependencies to `extension/manifests/android/build.gradle`
-   * Specified in `firebase_cpp_sdk/Android/firebase_dependencies.gradle` -> [`firebaseDependenciesMap`](https://github.com/firebase/firebase-cpp-sdk/blob/v7.3.0/release_build_files/Android/firebase_dependencies.gradle)
-   * Or in [`firebase_cpp_sdk/readme.md`](https://raw.githubusercontent.com/firebase/firebase-cpp-sdk/v7.3.0/release_build_files/readme.md)
+   * Specified in `firebase_cpp_sdk/Android/firebase_dependencies.gradle` -> [`firebaseDependenciesMap`](https://github.com/firebase/firebase-cpp-sdk/blob/v11.2.0/release_build_files/Android/firebase_dependencies.gradle)
+   * Or in [`firebase_cpp_sdk/readme.md`](https://raw.githubusercontent.com/firebase/firebase-cpp-sdk/v11.2.0/release_build_files/readme.md)
 
 
 #### Copy Android C++ library dependencies

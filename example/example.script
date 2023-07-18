@@ -1,5 +1,6 @@
 function init(self)
 	if firebase then
+		pprint(firebase)
 		firebase.init()
 	end
 end
