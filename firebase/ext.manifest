@@ -15,4 +15,4 @@ platforms:
 
   ios:
     context:
-        flags:      ['-std=c++11','-fcxx-modules', '-fmodules', '-fmodules-search-all', '-fmodules-ts']
+        flags:      ['-std=c++11','-fcxx-modules', '-fmodules']
