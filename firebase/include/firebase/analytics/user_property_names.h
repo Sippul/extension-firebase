@@ -1,4 +1,4 @@
-// Copyright 2022 Google Inc. All Rights Reserved.
+// Copyright 2023 Google Inc. All Rights Reserved.
 
 #ifndef FIREBASE_ANALYTICS_CLIENT_CPP_INCLUDE_FIREBASE_ANALYTICS_USER_PROPERTY_NAMES_H_
 #define FIREBASE_ANALYTICS_CLIENT_CPP_INCLUDE_FIREBASE_ANALYTICS_USER_PROPERTY_NAMES_H_
@@ -33,8 +33,7 @@ namespace analytics {
 /// more details and information about related settings.
 ///
 /// @code
-///  [FIRAnalytics setUserPropertyString:"NO"
-///                              forName:kUserPropertyAllowAdPersonalizationSignals];
+///  Analytics.setUserProperty("NO", forName: AnalyticsUserPropertyAllowAdPersonalizationSignals)
 /// @endcode
 static const char*const kUserPropertyAllowAdPersonalizationSignals
      = "allow_personalized_ads";
