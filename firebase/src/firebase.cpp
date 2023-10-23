@@ -6,6 +6,7 @@
 
 #if defined(DM_PLATFORM_ANDROID) || defined(DM_PLATFORM_IOS)
 
+#include "firebase.h"
 #include "luautils.h"
 #include "platform_utils.h"
 #include "firebase/app.h"
@@ -59,32 +60,17 @@ static int Firebase_Init(lua_State* L) {
 	FIR_PlatformDebugInit();
 #endif
 
-#if defined(DM_PLATFORM_ANDROID)
-	JNIEnv* env = 0;
-	dmGraphics::GetNativeAndroidJavaVM()->AttachCurrentThread(&env, NULL);
-	
+	Platform_FirebaseConfigure();
 	if (lua_isnoneornil(L, 1))
 	{
-		firebase_app_ = App::Create(env, dmGraphics::GetNativeAndroidActivity());
+		firebase_app_ = Platform_FirebaseInit(0x0);
 	}
 	else
 	{
 		AppOptions options;
 		ReadAppOptions(L, options);
-		firebase_app_ = App::Create(options, env, dmGraphics::GetNativeAndroidActivity());
+		firebase_app_ = Platform_FirebaseInit(&options);
 	}
-#else
-	if (lua_isnoneornil(L, 1))
-	{
-		firebase_app_ = App::Create();
-	}
-	else
-	{
-		AppOptions options;
-		ReadAppOptions(L, options);
-		firebase_app_ = App::Create(options);
-	}
-#endif
 
 	if(!firebase_app_)
 	{
